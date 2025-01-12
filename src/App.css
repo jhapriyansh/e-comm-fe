@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+
+* {
+  background-color: #fff;
+}
+.prods {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card-img {
+  width: 100%;
+  height: 262px;
+  object-fit: cover;
+  background-color: #c9dcdb;
+  border-radius: 9px;
+  transition: 400ms filter ease-out;
+}
+.prodCard:hover .card-img {
+  filter: blur(2px) brightness(0.8);
+}
+.prodCard {
+  border: 3px solid #c9dcdb;
+  width: 272px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 20px;
+  transition: 400ms border ease-out;
+  &:hover {
+    border: 3px solid #ffd4dc;
+  }
+}
+
+.title {
+  background: linear-gradient(to right, #fff, #efb1c7);
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 7vh;
+  font-weight: 700;
+}
+.prodInfo {
+  width: 89%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  opacity: 0;
+  transition: 400ms ease-in-out;
+  transition-property: left, opacity;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prodCard:hover .prodInfo {
+  left: 0px;
+  opacity: 0.6;
+}
+.prodCat {
+  height: 7vh;
+  padding-bottom: 4vh;
+  font-size: 5vh;
+  font-family: "Raleway", sans-serif;
+  color: #c0b5b9;
+}
+.cart {
+  padding: 0 20px;
+  border: 2px solid #c0b5b9;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  border-radius: 9px;
+  color: #f39c12;
+  margin: 30px;
+  transition: 200ms border-color ease-out;
+  > p {
+    font-size: 4vh;
+  }
+  &:hover {
+    border-color: #ffd4dc;
+  }
+}
+.singleProducts {
+  > span {
+    font-size: 3vh;
+    color: #7e7276;
+  }
+  > button {
+    border-radius: 7px;
+    background-color: #f1d8db;
+    border: none;
+  }
+}
+.resCart {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.5vh;
+  background-color: #c9dcdb;
+  border-radius: 7px;
+  color: #333333;
+  transition: 200ms background-color ease;
+  &:hover {
+    background-color: #f39c12;
+  }
+  &:active {
+    background-color: #e74c3c;
+  }
+}
+.tot {
+  font-size: 3vh;
+  padding-bottom: 10px;
+}
+.cost {
+  padding: 0;
+  color: green;
+}
+.cartBtn {
+  width: 100%;
+  height: 30%;
+  font-family: "Archivo", sans-serif;
+  font-size: 3vh;
+  border: 8px solid transparent;
+  outline: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: #f6c9ab;
+  transition-property: border, background;
+  transition: 150ms ease-in;
+  &:hover {
+    border: 8px solid #f1d8db;
+  }
+  &:active {
+    background-color: #f1d8db;
+  }
+}
+.prodName {
+  font-size: 3.5vh;
+  font-family: "Archivo", sans-serif;
+  transition: 400ms color ease-out;
+}
+.prodCost {
+  font-size: 3.5vh;
+  font-family: "Archivo", sans-serif;
+  color: black;
+}
+.prodCard:hover .prodName {
+  color: rgb(108, 119, 26);
+}
